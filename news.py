@@ -1,4 +1,3 @@
-from platform import architecture
 from newsapi import NewsApiClient
 
 class news():
@@ -21,4 +20,7 @@ class news():
              print('PUBLSIHED:', i['publishedAt'],
                        i['source']['name'], i['title'], i['url'], '\n')
             
+
+    def getEverything(self):
+        self.everything_headlines = self.newsapi.get_everything()
 
